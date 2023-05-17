@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eed5abe-6dda-40d7-b799-c908ef44614d" name="Changes" comment="gitignoreChange">
+    <list default="true" id="5eed5abe-6dda-40d7-b799-c908ef44614d" name="Changes" comment="firstTaskSolved">
+      <change afterPath="$PROJECT_DIR$/src/DateDurtation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PrintAllSundays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrintAllSundays.java" afterDir="false" />
     </list>
@@ -47,7 +48,14 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DateDurtation">
+    <configuration name="DateDurtation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DateDurtation" />
+      <module name="DatumUndZeit2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PrintAllSundays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PrintAllSundays" />
       <module name="DatumUndZeit2" />
@@ -57,6 +65,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DateDurtation" />
         <item itemvalue="Application.PrintAllSundays" />
       </list>
     </recent_temporary>
@@ -84,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684329230959</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="firstTaskSolved">
+      <created>1684334388703</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684334388703</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +116,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignoreChange" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignoreChange" />
+    <MESSAGE value="firstTaskSolved" />
+    <option name="LAST_COMMIT_MESSAGE" value="firstTaskSolved" />
   </component>
 </project>
