@@ -2,8 +2,9 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalField;
 import java.util.Locale;
+
+import static java.time.temporal.ChronoUnit.DAYS;
 
 public class DateDurtation {
     public static void main(String[] args) {
@@ -19,6 +20,8 @@ public class DateDurtation {
         System.out.println();
         TaskF();
         System.out.println();
+        TaskG();
+        System.out.println();
 
     }
     static void TaskA(){
@@ -28,7 +31,7 @@ public class DateDurtation {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.M.yyyy", Locale.GERMAN);
         LocalDate aD = LocalDate.parse(a,DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         LocalDate bD = LocalDate.parse(b,DateTimeFormatter.ofPattern("yyyy/MM/d"));
-        System.out.printf("%d Tage liegen zwischen %s und %s\n---------------------------------------------------------------",aD.until(bD,ChronoUnit.DAYS),aD.format(formatter),bD.format(formatter));
+        System.out.printf("%d Tage liegen zwischen %s und %s\n---------------------------------------------------------------",aD.until(bD, DAYS),aD.format(formatter),bD.format(formatter));
     }
     static void TaskB(){
         System.out.println("Aufgabe b)");
@@ -43,13 +46,13 @@ public class DateDurtation {
         System.out.println("Aufgabe c)");
         LocalDate birthday = LocalDate.of(2023,1,4);
         LocalDate now = LocalDate.now();
-        System.out.printf("Vergangene Tage seit dem Letzten Geburtstag: %d Tage\n---------------------------------------------------------------",birthday.until(now,ChronoUnit.DAYS));
+        System.out.printf("Vergangene Tage seit dem Letzten Geburtstag: %d Tage\n---------------------------------------------------------------",birthday.until(now, DAYS));
     }
     static void TaskD(){
         System.out.println("Aufgabe d)");
         LocalDate now = LocalDate.now();
         LocalDate birthday = LocalDate.of(2024,1,4);
-        System.out.printf("Tage bis zum nächten Geburtstag: %d Tage\n---------------------------------------------------------------",now.until(birthday,ChronoUnit.DAYS));
+        System.out.printf("Tage bis zum nächten Geburtstag: %d Tage\n---------------------------------------------------------------",now.until(birthday, DAYS));
     }
     static void TaskE(){
         System.out.println("Aufgabe E)");
@@ -65,15 +68,17 @@ public class DateDurtation {
         LocalDate nowPlus18 = now.plus(Period.between(birthday18,now));
         System.out.printf("Bis zu meinem %d. Geburtstag am %s sind es noch %d Jahre, %d Monate, %d Tage bzw. %d Gesamttage!\n---------------------------------------------------------------",
                           Period.between(birthday18.minusYears(18),nowPlus18).getYears(),nowPlus18.format(formatter),Period.between(now,nowPlus18).getYears(),
-                          Period.between(now,nowPlus18).getMonths(),Period.between(now,nowPlus18).getDays(),now.until(nowPlus18,ChronoUnit.DAYS));
+                          Period.between(now,nowPlus18).getMonths(),Period.between(now,nowPlus18).getDays(),now.until(nowPlus18, DAYS));
     }
     static void TaskG(){
         System.out.println("Aufgabe g)");
-        String a = "24.04.2021";
-        String b = "2022/10/3";
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.M.yyyy", Locale.GERMAN);
-        LocalDate aD = LocalDate.parse(a,DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        LocalDate bD = LocalDate.parse(b,DateTimeFormatter.ofPattern("yyyy/MM/d"));
-        System.out.printf("%d Tage liegen zwischen %s und %s%n",aD.until(bD,ChronoUnit.DAYS),aD.format(formatter),bD.format(formatter));
+        LocalDate march30 = LocalDate.of(2023,3,30);
+        LocalDate march30_1M = march30.plusMonths(1);
+        LocalDate march31 = LocalDate.of(2023,3,31);
+        LocalDate march31_1M = march31.plusMonths(1);
+        System.out.printf("%s + 1 Monat: %s, Tag-Differenz: %d%n%s + 1 Monat: %s, Tag-Differenz: %d\n---------------------------------------------------------------",
+                          march30.format(formatter),march30_1M.format(formatter),march30.until(march30_1M, DAYS),
+                          march31.format(formatter),march31_1M.format(formatter),march31.until(march31_1M,DAYS));
     }
 }
