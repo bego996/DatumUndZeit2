@@ -23,7 +23,5 @@ public class PrintDaysPerMonth {
         int input = scanner.nextInt();
         System.out.println("Anzahl der Tage:");
         calcDaysPerMonth(input);
-
-
     }
 }
